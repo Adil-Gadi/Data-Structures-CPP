@@ -1,0 +1,41 @@
+//
+// Created by Adil Gadi on 2/27/25.
+//
+
+#ifndef STACK_H
+#define STACK_H
+
+template <typename T>
+struct StackItem {
+    T data;
+    StackItem<T>* below = nullptr;
+};
+
+template <typename T>
+class Stack {
+public:
+    Stack() = default;
+
+    const StackItem<T>* get_top();
+
+    StackItem<T>* stack(T data);
+
+    StackItem<T>* pop();
+
+    void pop_and_free();
+
+    StackItem<T>* swap(T data);
+
+    void swap_and_free(T data);
+
+    //TODO: implement deconstructor
+    virtual ~Stack();
+private:
+    StackItem<T>* top = nullptr;
+
+    static void freeStackItem(StackItem<T>* item);
+};
+
+#include "stack.tpp"
+
+#endif //STACK_H
