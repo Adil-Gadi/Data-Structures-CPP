@@ -28,7 +28,6 @@ public:
 
     void swap_and_free(T data);
 
-    //TODO: implement deconstructor
     virtual ~Stack();
 private:
     StackItem<T>* top = nullptr;
