@@ -28,6 +28,8 @@ public:
 
     void set_safely(int index, T item);
 
+    void pop();
+
     [[nodiscard]] size_t length() const;
 
     [[nodiscard]] int get_size() const;

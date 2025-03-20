@@ -84,3 +84,12 @@ template<typename T>
 int Vector<T>::get_size() const {
     return this->size;
 }
+
+template<typename T>
+void Vector<T>::pop() {
+    if (this->size < 1) {
+        return;
+    }
+
+    --this->size;
+}
