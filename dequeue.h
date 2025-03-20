@@ -21,13 +21,15 @@ public:
     void unshift();
 
     //TODO: implement deconstructor
-    ~Dequeue() = default;
+    ~Dequeue();
 
     DequeueItem<T>* getHeadItem() const;
     DequeueItem<T>* getTail() const;
 // private:
     DequeueItem<T>* head;
     DequeueItem<T>* tail;
+
+    void freeDequeueItem(DequeueItem<T>* item);
 };
 
 

@@ -15,11 +15,7 @@ int main() {
     x.push(12);
     x.push(15);
     x.shift(5);
-    x.unshift();
-    x.unshift();
-    x.unshift();
-    x.unshift();
-    x.unshift();
+    x.shift(8);
 
     if (x.head == nullptr) {
         LOG("undefined head");

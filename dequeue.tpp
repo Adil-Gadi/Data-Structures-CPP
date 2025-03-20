@@ -83,3 +83,17 @@ void Dequeue<T>::unshift() {
 
     delete tail;
 }
+
+template<typename T>
+Dequeue<T>::~Dequeue() {
+    this->freeDequeueItem(this->head);
+}
+
+template<typename T>
+void Dequeue<T>::freeDequeueItem(DequeueItem<T>* item) {
+    if (item == nullptr) return;
+
+    freeDequeueItem(item->after);
+
+    delete item;
+}
