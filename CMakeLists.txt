@@ -12,4 +12,6 @@ add_executable(Data_Structures main.cpp
         linked_list.h
         stack.tpp
         stack.h
+        dequeue.tpp
+        dequeue.h
 )

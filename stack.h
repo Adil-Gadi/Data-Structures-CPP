@@ -7,8 +7,8 @@
 
 template <typename T>
 struct StackItem {
-    T data;
     StackItem<T>* below = nullptr;
+    T data;
 };
 
 template <typename T>

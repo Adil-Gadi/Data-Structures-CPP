@@ -1,6 +1,7 @@
 #include <print>
 #include <iostream>
 
+#include "dequeue.h"
 #include "stack.h"
 #include "string.h"
 #include "vector.h"
@@ -9,19 +10,27 @@
 
 int main() {
 
-    Vector<int> x = Vector<int>(100);
-    //
-    for (int i = 1; i < 10; i++) {
-        x.push(i);
+    Dequeue<int> x = Dequeue<int>();
+
+    x.push(12);
+    x.push(15);
+    x.shift(5);
+    x.unshift();
+    x.unshift();
+    x.unshift();
+    x.unshift();
+    x.unshift();
+
+    if (x.head == nullptr) {
+        LOG("undefined head");
     }
-    //
-    // x.pop();
-    for (int i = 0; i < x.get_size(); i++) {
-        std::println("Index {}, Item {}", i, x.get_ptr()[i]);
+
+   if (x.tail == nullptr) {
+        LOG("undefined tail");
     }
-    //
-    std::println("Size: {}", x.get_size());
-    std::println("Len: {}", x.length());
-    //
+
+    LOG("head " << x.head);
+    LOG("tail " << x.tail);
+
     return 0;
 }
