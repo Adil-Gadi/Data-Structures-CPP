@@ -90,6 +90,16 @@ Dequeue<T>::~Dequeue() {
 }
 
 template<typename T>
+DequeueItem<T> * Dequeue<T>::getHeadItem() const {
+    return this->head;
+}
+
+template<typename T>
+DequeueItem<T> * Dequeue<T>::getTail() const {
+    return this->tail;
+}
+
+template<typename T>
 void Dequeue<T>::freeDequeueItem(DequeueItem<T>* item) {
     if (item == nullptr) return;
 

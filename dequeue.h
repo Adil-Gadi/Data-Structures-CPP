@@ -25,7 +25,7 @@ public:
 
     DequeueItem<T>* getHeadItem() const;
     DequeueItem<T>* getTail() const;
-// private:
+private:
     DequeueItem<T>* head;
     DequeueItem<T>* tail;
 

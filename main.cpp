@@ -16,17 +16,18 @@ int main() {
     x.push(15);
     x.shift(5);
     x.shift(8);
+    x.pop();
 
-    if (x.head == nullptr) {
+    if (x.getHeadItem() == nullptr) {
         LOG("undefined head");
     }
 
-   if (x.tail == nullptr) {
+   if (x.getTail() == nullptr) {
         LOG("undefined tail");
     }
 
-    LOG("head " << x.head);
-    LOG("tail " << x.tail);
+    LOG("head " << x.getHeadItem());
+    LOG("tail " << x.getTail());
 
     return 0;
 }
