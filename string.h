@@ -40,16 +40,16 @@ public:
 
     String& operator+=(const String& other);
 
-    size_t get_amount_reserved() const;
+    [[nodiscard]] size_t get_amount_reserved() const;
 
-    bool has_reserved_amount() const;
+    [[nodiscard]] bool has_reserved_amount() const;
 
     [[nodiscard]] size_t length() const;
 
 private:
     char* buffer = nullptr;
     size_t len = 0;
-    size_t amountReserved;
+    size_t amountReserved{};
     bool hasReserved = false;
 
 };
